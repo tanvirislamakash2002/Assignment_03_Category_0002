@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing</title>
 
+    <!-- google font  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
     <!-- font awesome cdn  -->
     <script src="https://kit.fontawesome.com/e085ef6fdb.js" crossorigin="anonymous"></script>
 
@@ -20,13 +26,129 @@
                 'text-color':'rgba(17, 17, 17, 1)',
                 'primary-color':'rgba(23, 152, 0, 1)',
                 'secondary-color':'rgba(239, 235, 227, 1)',
+              },
+              fontFamily:{
+                sora:[ "Sora", 'serif'],
+                poppins:[ "Poppins", 'serif'],
               }
             }
           }
         }
       </script>
+
+
+
+
+      <!-- custom css  -->
+
+      <style>
+        /* responsive product box */
+        @media screen and (max-width:1023px) {
+            .none{
+                display: none;
+            }
+        }
+
+        /* animation  design here */
+
+        
+/* animation 1  */
+
+        .animation1{
+            animation-name:a1 ;
+            animation-delay:1s;
+            animation-duration:  5s ;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes a1 {
+  0%   {
+        bottom:  40%;    
+        left:  50%;
+    }
+  50% {
+        bottom:  80%;
+        left:  60%;
+    }
+  100% {
+        bottom:  40%;    
+        left:  50%;
+    }
+}
+/* animation 2  */
+
+        .animation2{
+            animation-name:a2 ;
+            animation-duration:  5s ;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes a2 {
+  0%   {
+        bottom:  40%;    
+        left:  50%;
+    }
+  50% {
+        bottom:  70%;
+        left:  5%;
+    }
+  100% {
+        bottom:  40%;    
+        left:  50%;
+    }
+    
+}
+/* animation 3  */
+
+        .animation3{
+            animation-name:a3 ;
+            animation-delay:1s;
+            animation-duration:  5s ;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes a3 {
+  0%   {
+        bottom:  40%;    
+        left:  50%;
+    }
+  50% {
+        bottom:  80%;
+        left:  30%;
+    }
+  100% {
+        bottom:  40%;    
+        left:  50%;
+    }
+    
+}
+/* animation 4  */
+
+        .animation4{
+            animation-name:a4 ;
+            animation-duration:  5s ;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes a4 {
+  0%   {
+        bottom:  20%;    
+        left:  40%;
+    }
+  50% {
+        bottom:  70%;
+        left:  80%;
+    }
+  100% {
+        bottom:  40%;    
+        left:  50%;
+    }
+    
+}
+
+      </style>
 </head>
-<body class="text-text-color">
+<body class="text-text-color font-sora">
 
     <!-- Header section  -->
      <header class="bg-gradient-to-b from-[#FFFFFF] to-[#EFEBE3]">
@@ -41,8 +163,8 @@
         <li><a class=" hidden md:block" href="#">Contact us</a></li>
      </ul>
      <div class=" flex gap-x-3 items-center ">
-        <i class="fa-solid fa-magnifying-glass text-xl  hidden lg:block"></i>
-        <i class="fa-solid fa-cart-shopping text-xl  hidden lg:block"></i>
+        <i class="fa-solid fa-magnifying-glass text-xl  hidden lg:block cursor-pointer"></i>
+        <i class="fa-solid fa-cart-shopping text-xl  hidden lg:block cursor-pointer"></i>
         <button class=" border border-primary-color px-8 py-3 rounded-lg font-medium text-xl hidden md:block">Login</button>
         <button class="bg-primary-color text-white px-8 py-3 rounded-lg font-medium text-xl hidden md:block">Register</button>
      </div>
@@ -55,8 +177,12 @@
                 <span class="text-primary-color">Count</span> On, Prices You’ll Love!
             </h1>
             <p class="text-center font-normal md:text-xl lg:w-6/12 w-9/12 mx-auto my-9">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day!</p>
-            <div class="md:w-4/5 lg:w-4/6 mx-auto">
+            <div class="md:w-4/5 lg:w-4/6 mx-auto relative">
                 <img class="w-full" src="./image/hero-vegetables.png" alt="">
+                <img class="absolute  animation1" src="./image/onion.png" alt="">
+                <img class="absolute  animation2" src="./image/tomato.png" alt="">
+                <img class="absolute  animation3" src="./image/onion.png" alt="">
+                <img class="absolute  animation4" src="./image/tomato.png" alt="">
             </div>
          </section>
      </header>
@@ -178,19 +304,67 @@
                             </div>
                         </div>
                         <!-- box  -->
-                        <div class="bg-white flex items-center rounded-xl">
-                            <div class=""><img class="bg-secondary-color m-4 rounded-xl" src="./image/potato.png" alt=""></div>
-                            <div class="">
-                                <span class=" text-xs lg:text-base"><i class="fa-solid fa-star text-[#FFC107] mr-3"></i>4.5</span>
-                            <h3 class="text-sm lg:text-xl font-medium">Potato 1KG</h3>
-                            <h4 class="font-medium text-xs lg:text-base"><i class="fa-solid fa-dollar-sign"></i>39.99</h4>
+                            <div class="bg-white flex items-center rounded-xl">
+                                <div class="none"><img class="bg-secondary-color m-4 rounded-xl" src="./image/potato.png" alt=""></div>
+                                <div class="none">
+                                    <span class=" text-xs lg:text-base"><i class="fa-solid fa-star text-[#FFC107] mr-3"></i>4.5</span>
+                                <h3 class="text-sm lg:text-xl font-medium">Potato 1KG</h3>
+                                <h4 class="font-medium text-xs lg:text-base"><i class="fa-solid fa-dollar-sign"></i>39.99</h4>
+                                </div>
                             </div>
-                        </div>
 
                     </div>
                 </div>
             </div>
           </section>
+
+          <!-- Extra section  -->
+
+          <section class="my-12 md:my-36 max-w-7xl mx-auto">
+            <h1 class="text-2xl md:text-4xl font-semibold text-primary-color mb-8 md:mb-12 mx-4">Our Product</h1>
+            <!-- extra cards  -->
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-4">
+                <!-- card 1 -->
+                 <div class="bg-secondary-color p-8 rounded-2xl">
+                    <img class="mx-auto" src="./image/v1.png" alt="">
+                    <h2 class="text-center text-2xl font-semibold pt-6">Potato</h2>
+                    
+        <button class="block mx-auto mt-7 bg-primary-color text-white px-8 py-3 rounded-lg font-medium text-xl">Buy Now</button>
+                 </div>
+                <!-- card 2 -->
+                 <div class="bg-secondary-color p-8 rounded-2xl">
+                    <img class="mx-auto" src="./image/v4.png" alt="">
+                    <h2 class="text-center text-2xl font-semibold pt-6">Cucumber </h2>
+                    <button class="block mx-auto mt-7 bg-primary-color text-white px-8 py-3 rounded-lg font-medium text-xl">Buy Now</button>
+                 </div>
+                <!-- card 3 -->
+                 <div class="bg-secondary-color p-8 rounded-2xl">
+                    <img class="mx-auto" src="./image/v3.png" alt="">
+                    <h2 class="text-center text-2xl font-semibold pt-6">Carrot </h2>
+                    <button class="block mx-auto mt-7 bg-primary-color text-white px-8 py-3 rounded-lg font-medium text-xl">Buy Now</button>
+                 </div>
+                <!-- card 4 -->
+                 <div class="bg-secondary-color p-8 rounded-2xl">
+                    <img class="mx-auto" src="./image/v4.png" alt="">
+                    <h2 class="text-center text-2xl font-semibold pt-6">Tomato</h2>
+                    <button class="block mx-auto mt-7 bg-primary-color text-white px-8 py-3 rounded-lg font-medium text-xl">Buy Now</button>
+                 </div>
+                <!-- card 5 -->
+                 <div class="bg-secondary-color p-8 rounded-2xl">
+                    <img class="mx-auto" src="./image/v5.png" alt="">
+                    <h2 class="text-center text-2xl font-semibold pt-6">Onion</h2>
+                    <button class="block mx-auto mt-7 bg-primary-color text-white px-8 py-3 rounded-lg font-medium text-xl">Buy Now</button>
+                 </div>
+                <!-- card 6 -->
+                 <div class="bg-secondary-color p-8 rounded-2xl">
+                    <img class="mx-auto" src="./image/v1.png" alt="">
+                    <h2 class="text-center text-2xl font-semibold pt-6">Green papaya</h2>
+                    <button class="block mx-auto mt-7 bg-primary-color text-white px-8 py-3 rounded-lg font-medium text-xl">Buy Now</button>
+                 </div>
+
+             </div>
+             <button class="block mx-auto mt-14 bg-primary-color text-white px-8 py-3 rounded-xl font-medium text-2xl lg:text-3xl">More Product <i class="fa-solid fa-angle-right ml-3"></i></button>
+         </section>
 
           <!-- Offer section  -->
            <section class="max-w-7xl mx-auto my-12 lg:mt-36 md:mb-96 mb-72">
@@ -202,8 +376,8 @@
                     <!-- box content  -->
                      <div class="w-3/5 lg:w-3/5 my-6 lg:my-11 md:my-6 ml-5 lg:ml-10 md:ml-5">
                         <img class="lg:my-1" src="./image/dawat-logo.png" alt="">
-                        <button class="text-sm md:text-lg lg:text-2xl bg-[#63B76D] text-white rounded-xl my-4 md:my-7 lg:px-10 px-4 lg:py-4 py-2">Cook Exotic Dishes</button>
-                        <h2 class="text-xl lg:text-4xl text-white font-normal">UP to <span class="font-bold">20% OFF</span></h2>
+                        <button class="text-sm md:text-lg lg:text-2xl bg-[#63B76D] text-white rounded-xl my-4 md:my-7 lg:px-10 px-4 lg:py-4 py-2 font-poppins">Cook Exotic Dishes</button>
+                        <h2 class="text-xl lg:text-4xl text-white font-normal font-poppins">UP to <span class="font-bold">20% OFF</span></h2>
                      </div>
                      <!-- box image -->
                       <div class="mt-8 md:mt-2"><img class="" src="./image/dawat-mock-up.png" alt=""></div>
@@ -213,8 +387,8 @@
                     <!-- box content  -->
                      <div class="w-3/5 lg:w-3/5 my-2 lg:my-5 md:my-3 ml-5 lg:ml-7 md:ml-5">
                         <img class="lg:my-1" src="./image/india-gate-logo.png" alt="">
-                        <button class="text-sm md:text-lg lg:text-2xl bg-[#2A4D97] text-white rounded-xl my-4 md:my-7 lg:px-10 px-4 lg:py-4 py-2">World’s No.1 Rice</button>
-                        <h2 class="text-xl lg:text-4xl text-white font-normal mb-4">UP to <span class="font-bold">40% OFF</span></h2>
+                        <button class="text-sm md:text-lg lg:text-2xl bg-[#2A4D97] text-white rounded-xl my-4 md:my-7 lg:px-10 px-4 lg:py-4 py-2 font-poppins">World’s No.1 Rice</button>
+                        <h2 class="text-xl lg:text-4xl text-white font-normal mb-4 font-poppins">UP to <span class="font-bold">40% OFF</span></h2>
                      </div>
                      <!-- box image -->
                       <div class="mt-8 md:mt-2 pr-3"><img class="" src="./image/india-gate-mock-up.png" alt=""></div>
